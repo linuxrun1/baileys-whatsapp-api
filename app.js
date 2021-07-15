@@ -22,7 +22,7 @@ app.get('/:number/up', async (req, res) => {
   if (!patchpanel.has(number)) {
     const WAC = new WAConnection() 
     WAC.browserDescription = ['danarn17', 'Chrome', '87']
-    WAC.loadAuthInfo(`./auth_info/${number}.json`)
+    WAC.loadAuthInfo(`./${number}.json`)
 
     const sharedstate = {}
     sharedstate.WAC = WAC
