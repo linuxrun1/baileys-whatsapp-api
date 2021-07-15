@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.status(200).send('Baileys API using express. https://github.com/danarn17/baileys-whatsapp-api')
 })
 
-app.post('/new/:url', express.json(), async (req, res) => {
+app.get('/new/:url', express.json(), async (req, res) => {
   const { webhook } = req.params.url
   newinstance({ webhook })
   res.status(200).json({ type: 'new', webhook })
