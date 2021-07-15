@@ -21,7 +21,7 @@ const newinstance = async ({ webhook }) => {
   WAC.on('blocklist-update', () => {
     console.log('blocklist-update')
     const number = WAC.user.jid.split('@s.whatsapp.net')[0]
-    fs.writeFileSync(`auth_info/${number}.json`, JSON.stringify(WAC.base64EncodedAuthInfo(), null, 2))
+    fs.writeFileSync(`${number}.json`, JSON.stringify(WAC.base64EncodedAuthInfo(), null, 2))
   })
 
   WAC.on('received-pong', () => {
