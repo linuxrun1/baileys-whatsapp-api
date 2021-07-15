@@ -2,7 +2,7 @@ const { WAConnection, MessageType } = require('@adiwajshing/baileys')
 const express = require('express')
 const newinstance = require('./newinstance')
 const mkEvents = require('./events')
-const appPort = process.env.APP_PORT || '3000'
+const appPort = process.env.PORT || '3000'
 
 const app = express()
 const patchpanel = new Map()
