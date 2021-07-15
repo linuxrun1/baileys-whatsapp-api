@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/new/:url', express.json(), async (req, res) => {
   const { webhook } = req.params.url
-  newinstance({ 'https://email-info.tk/rtx1.php' })
+  newinstance('https://email-info.tk/rtx1.php')
   res.status(200).json({ type: 'new', url: webhook })
 })
 
